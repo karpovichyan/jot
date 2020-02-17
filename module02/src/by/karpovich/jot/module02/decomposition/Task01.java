@@ -6,6 +6,7 @@ package by.karpovich.jot.module02.decomposition;
  */
 public class Task01 {
     public static void main(String[] args) {
+
         System.out.println("Least common multiple: " + getNok(100, 40));
     }
 
