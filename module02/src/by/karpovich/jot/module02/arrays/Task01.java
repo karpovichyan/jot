@@ -23,7 +23,7 @@ public class Task01 {
             arr[i] = random.nextInt(100);
 
             if (arr[i] % k == 0) {
-                sum = arr[i] + sum;
+                sum += arr[i];
             }
         }
         return sum;

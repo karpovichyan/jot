@@ -1,13 +1,12 @@
 package by.karpovich.jot.module02.arrays;
 
+import java.util.Random;
+
 /*
 2. Дана последовательность действительных чисел а1 ,а2 ,..., ап.
    Заменить все ее члены, большие данного Z, этим числом.
    Подсчитать количество замен.
  */
-
-import java.util.Random;
-
 public class Task02 {
     public static void main(String[] args) {
 
