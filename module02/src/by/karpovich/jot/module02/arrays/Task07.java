@@ -10,7 +10,7 @@ public class Task07 {
         int[] newArr = new int[5];
 
         printArray(arr);
-        newArrayWithNewdigits(arr, newArr);
+        newArrayWithNewDigits(arr, newArr);
         System.out.println("\nmax: " + maxOfNewArray(newArr));
     }
 
@@ -21,7 +21,7 @@ public class Task07 {
         System.out.println(" ");
     }
 
-    public static void newArrayWithNewdigits(int[] arr, int[] newArr) {
+    public static void newArrayWithNewDigits(int[] arr, int[] newArr) {
         int newDigitsOfMax;
 
         for (int i = 0; i < arr.length / 2; i++) {
