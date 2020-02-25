@@ -7,5 +7,43 @@ package by.karpovich.jot.module02.arrays;
 public class Task08 {
     public static void main(String[] args) {
 
+        int[] arr = new int[]{300, 2, 3, 4, 5, -1, 1, -1, 9, 10};
+        int min = arr[0];
+        int countArr = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println(" ");
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == min) {
+                countArr++;
+            }
+        }
+
+        System.out.println(countArr);
+        System.out.println(min);
+
+        int[] newArr = new int[arr.length - countArr];
+        int j = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != min) {
+                newArr[j] = arr[i];
+                j++;
+            }
+        }
+
+        for (int i = 0; i < newArr.length; i++) {
+            System.out.print(newArr[i] + " ");
+        }
     }
 }
+
