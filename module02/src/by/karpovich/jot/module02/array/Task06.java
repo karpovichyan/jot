@@ -1,4 +1,4 @@
-package by.karpovich.jot.module02.arrays;
+package by.karpovich.jot.module02.array;
 
 /*
 6. Задана последовательность N вещественных чисел. Вычислить сумму чисел, порядковые номера которых

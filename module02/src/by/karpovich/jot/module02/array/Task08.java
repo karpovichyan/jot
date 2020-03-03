@@ -1,4 +1,4 @@
-package by.karpovich.jot.module02.arrays;
+package by.karpovich.jot.module02.array;
 
 /*
 8. Дана последовательность целых чисел  a1, a2,...,an. Образовать новую последовательность, выбросив из
@@ -8,20 +8,20 @@ public class Task08 {
     public static void main(String[] args) {
 
         int[] arr = new int[]{300, 2, 3, 4, 5, -1, 1, -1, 9, 10};
-        int min = arr[0];
-        int countArr = 0;
 
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println(" ");
 
+        int min = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < min) {
                 min = arr[i];
             }
         }
 
+        int countArr = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == min) {
                 countArr++;

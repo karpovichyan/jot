@@ -1,4 +1,4 @@
-package by.karpovich.jot.module02.arrays;
+package by.karpovich.jot.module02.array;
 
 /*
 4. Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и наименьший элементы.

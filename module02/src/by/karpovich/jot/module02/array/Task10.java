@@ -1,4 +1,4 @@
-package by.karpovich.jot.module02.arrays;
+package by.karpovich.jot.module02.array;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -14,6 +14,7 @@ public class Task10 {
 
         System.out.print("enter a size of array: ");
         int size = Integer.parseInt(reader.nextLine());
+
         System.out.println(" ");
 
         int[] arr = new int[size];
@@ -30,21 +31,18 @@ public class Task10 {
 
         System.out.println(" ");
 
+        int j = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 != 0) {
                 arr[i] = 0;
             }
-        }
-
-        System.out.println(" ");
-
-        int j = 0;
-        for (int i = 0; i < arr.length; i++) {
             if (arr[i] != 0 || (arr[i] == 0 && i % 2 == 0)) {
-                    arr[j] = arr[i];
+                arr[j] = arr[i];
                 j++;
             }
         }
+
+        System.out.println(" ");
 
         for (int i = arr.length - j + 1; i < arr.length; i++) {
             arr[i] = 0;
@@ -55,3 +53,7 @@ public class Task10 {
         }
     }
 }
+
+
+
+

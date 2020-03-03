@@ -1,4 +1,4 @@
-package by.karpovich.jot.module02.arrays;
+package by.karpovich.jot.module02.array;
 
 import java.util.Random;
 

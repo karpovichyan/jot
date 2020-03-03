@@ -1,4 +1,4 @@
-package by.karpovich.jot.module02.arrays;
+package by.karpovich.jot.module02.array;
 
 /*
 7. Даны действительные числа a1, a2,...,a2n. Найти max(a1 + a2n, a2 + a2n-1,...,an + an+1)

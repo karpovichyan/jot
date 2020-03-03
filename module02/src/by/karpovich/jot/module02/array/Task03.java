@@ -1,4 +1,4 @@
-package by.karpovich.jot.module02.arrays;
+package by.karpovich.jot.module02.array;
 
 /*
 3. Дан массив действительных чисел, размерность которого N.
