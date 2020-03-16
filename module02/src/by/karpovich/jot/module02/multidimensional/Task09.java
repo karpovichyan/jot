@@ -46,7 +46,6 @@ public class Task09 {
             if (max == sumArr[0]) {
                 columnOfMaxSum = 1;
             }
-
         }
         System.out.println("\n\n" + columnOfMaxSum + " column contains the max sum");
         System.out.println();
