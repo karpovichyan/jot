@@ -14,8 +14,13 @@ package by.karpovich.jot.module02.multidimensional;
 
 public class Task04 {
     public static void main(String[] args) {
+        int[][] arr = initArray(6);
+        printResultArray(arr);
+    }
 
-        int[][] arr = new int[6][6];
+
+    public static int[][] initArray(int n) {
+        int[][] arr = new int[n][n];
 
         for (int i = 0; i < arr.length; i++) {
             int sum = 0;
@@ -26,6 +31,7 @@ public class Task04 {
                 }
             }
         }
+
         for (int i = 0; i < arr.length; i++) {
             int sum = arr.length + 1;
             for (int j = 0; j < arr.length; j++) {
@@ -35,6 +41,10 @@ public class Task04 {
                 }
             }
         }
+        return arr;
+    }
+
+    public static void printResultArray(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 System.out.printf("%-3d", arr[i][j]);
