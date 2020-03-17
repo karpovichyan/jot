@@ -7,19 +7,35 @@ import java.util.Random;
  */
 public class Task15 {
     public static void main(String[] args) {
-        int[][] arr = new int[5][5];
-        //int[][] arr = new int[][]{{2, 5, 9, 4, -1}, {8, 3, 0, 1, 5}, {4, 5, 8, 1, 2}, {3, 6, 4, 1, 4}, {1, 0, 9, 5, -4}};
+        int[][] arr = initArray(5);
+        printArray(arr);
+        System.out.println("\nmax element of matrix: " + maxElemOfArray(arr) + "\n");
+        changedArray(arr, maxElemOfArray(arr));
+        printArray(arr);
+    }
+
+    public static int[][] initArray(int n) {
+        int[][] arr = new int[n][n];
 
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 arr[i][j] = random.nextInt(10);
-                System.out.printf("%3d", arr[i][j]);
+            }
+        }
+        return arr;
+    }
+
+    public static void printArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.printf("%-3d", arr[i][j]);
             }
             System.out.println();
         }
-        System.out.println();
+    }
 
+    public static int maxElemOfArray (int[][] arr) {
         int max = arr[0][0];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
@@ -28,16 +44,16 @@ public class Task15 {
                 }
             }
         }
-        System.out.println("max element of matrix: " + max + "\n");
+        return max;
+    }
 
+    public static void changedArray(int[][] arr, int max) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 if (arr[i][j] % 2 != 0) {
-                arr[i][j] = max;
+                    arr[i][j] = max;
                 }
-                System.out.printf("%3d", arr[i][j]);
             }
-            System.out.println();
         }
     }
 }
