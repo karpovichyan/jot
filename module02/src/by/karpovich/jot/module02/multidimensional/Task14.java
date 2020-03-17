@@ -6,19 +6,20 @@ package by.karpovich.jot.module02.multidimensional;
  */
 public class Task14 {
     public static void main(String[] args) {
+        int[][] arr = initArray();
+    }
 
+    public static int[][] initArray() {
         int m = 1 + (int) (Math.random() * 10);
         int n = 1 + (int) (Math.random() * 10);
         int[][] arr = new int[m][n];
         System.out.println("matrix " + m + "x" + n + "\n");
-
         for (int i = 0; i < arr.length; i++) {
             if (m < n) {
-                System.out.println("matrix " + m + "x" + n + " is undefined");
+                System.out.println("This matrix is undefined");
                 break;
             }
             for (int j = 0; j < arr[i].length; j++) {
-
                 if (i <= j) {
                     arr[i][j] = 1;
                 }
@@ -26,5 +27,6 @@ public class Task14 {
             }
             System.out.println();
         }
+        return arr;
     }
 }
