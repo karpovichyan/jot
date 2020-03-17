@@ -7,19 +7,41 @@ import java.util.Random;
  */
 public class Task12 {
     public static void main(String[] args) {
-        //int[][] arr = new int[][]{{2, 5, 9, 4, -1}, {8, 3, 0, 1, 5}, {4, 5, 8, 1, 2}, {3, 6, 4, 1, 4}, {1, 0, 9, 5, -4}};
-        int[][] arr = new int[5][5];
+        int[][] arr = initArray(5);
+        printArray(arr);
+
+        System.out.println("\nSort Ascending: ");
+        sortRowsAscending(arr);
+        printArray(arr);
+
+        System.out.println("\nSort Descending: ");
+        sortRowsDescending(arr);
+        printArray(arr);
+
+    }
+
+    public static int[][] initArray(int n) {
+        int[][] arr = new int[n][n];
 
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 arr[i][j] = random.nextInt(10);
+            }
+        }
+        return arr;
+    }
+
+    public static void printArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
                 System.out.printf("%3d", arr[i][j]);
             }
             System.out.println();
         }
-        System.out.println("\nSort Ascending: \n");
+    }
 
+    public static void sortRowsAscending(int[][] arr) {
         int min;
         int indexMin;
 
@@ -37,16 +59,9 @@ public class Task12 {
                 arr[k][i] = min;
             }
         }
+    }
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                System.out.printf("%3d", arr[i][j]);
-            }
-            System.out.println();
-        }
-
-        System.out.println("\nSort Descending: \n");
-
+    public static void sortRowsDescending(int[][] arr) {
         int max;
         int indexMax;
 
@@ -63,13 +78,6 @@ public class Task12 {
                 arr[k][indexMax] = arr[k][i];
                 arr[k][i] = max;
             }
-        }
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                System.out.printf("%3d", arr[i][j]);
-            }
-            System.out.println();
         }
     }
 }
