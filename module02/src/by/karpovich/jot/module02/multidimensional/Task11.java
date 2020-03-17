@@ -9,19 +9,37 @@ import java.util.Random;
  */
 public class Task11 {
     public static void main(String[] args) {
-        int[][] arr = new int[10][20];
-        //int[][] arr = new int[][]{{-1, 5, 5, 5, 2}, {8, 3, 0, 1, 5}, {4, 5, 5, 5, 5}, {3, 6, 4, 1, 4}, {1, 0, 9, 5, -4}};
+        int[][] arr = initArray(10, 20);
+        printArray(arr);
         int[] arrOfFive = new int[arr.length];
+        calculateFivesAndRows(arr, arrOfFive);
+        System.out.print("\nnumber of a row: ");
+        printRows(arrOfFive);
+    }
+
+    public static int[][] initArray(int m, int n) {
+        int[][] arr = new int[m][n];
 
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
-            System.out.print("row № " + (i + 1) + " ");
             for (int j = 0; j < arr[i].length; j++) {
                 arr[i][j] = random.nextInt(15);
+            }
+        }
+        return arr;
+    }
+
+    public static void printArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("row № " + (i + 1) + " ");
+            for (int j = 0; j < arr[i].length; j++) {
                 System.out.printf("%4d", arr[i][j]);
             }
             System.out.println();
         }
+    }
+
+    public static void calculateFivesAndRows(int[][] arr, int[] arrOfFive) {
         for (int i = 0; i < arr.length; i++) {
             int count = 0;
             for (int j = 0; j < arr[i].length; j++) {
@@ -33,7 +51,9 @@ public class Task11 {
                 }
             }
         }
-        System.out.print("\nnumber of a row: ");
+    }
+
+    public static void printRows(int[] arrOfFive) {
         for (int i = 0; i < arrOfFive.length; i++) {
             if (arrOfFive[i] > 0) {
                 System.out.print(arrOfFive[i] + " ");
