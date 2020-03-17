@@ -7,18 +7,41 @@ import java.util.Random;
  */
 public class Task13 {
     public static void main(String[] args) {
-        int[][] arr = new int[5][5];
+        int[][] arr = initArray(5);
+        printArray(arr);
+
+        System.out.println("\nSort Ascending: ");
+        sortColumnsAscending(arr);
+        printArray(arr);
+
+        System.out.println("\nSort Descending: ");
+        sortColumnsDescending(arr);
+        printArray(arr);
+
+    }
+
+    public static int[][] initArray(int n) {
+        int[][] arr = new int[n][n];
 
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 arr[i][j] = random.nextInt(10);
+            }
+        }
+        return arr;
+    }
+
+    public static void printArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
                 System.out.printf("%3d", arr[i][j]);
             }
             System.out.println();
         }
-        System.out.println("\nSort Ascending: \n");
+    }
 
+    public static void sortColumnsAscending(int[][] arr) {
         int min;
         int indexMin;
 
@@ -36,15 +59,9 @@ public class Task13 {
                 arr[i][k] = min;
             }
         }
+    }
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                System.out.printf("%3d", arr[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println("\nSort Descending: \n");
-
+    public static void sortColumnsDescending(int[][] arr) {
         int max;
         int indexMax;
 
@@ -61,13 +78,6 @@ public class Task13 {
                 arr[indexMax][k] = arr[i][k];
                 arr[i][k] = max;
             }
-        }
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                System.out.printf("%3d", arr[i][j]);
-            }
-            System.out.println();
         }
     }
 }
