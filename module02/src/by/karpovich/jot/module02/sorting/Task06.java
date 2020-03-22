@@ -17,8 +17,10 @@ public class Task06 {
     public static void shellSort(int[] arr) {
         int h = 1;
         int n = arr.length;
-        while (h < n / 3)
+
+        while (h < n / 3) {
             h = 3 * h + 1;
+        }
 
         while (h >= 1) {
             for (int i = h; i < arr.length; i++) {
