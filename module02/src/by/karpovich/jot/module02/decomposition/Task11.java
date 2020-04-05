@@ -14,7 +14,6 @@ public class Task11 {
     public static int getNumberOfDigits(int a) {
         int j = 0;
         for (int i = a; i > 0; i /= 10) {
-            int numerOfDigits = a / i;
             j++;
         }
         return j;
